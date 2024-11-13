@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./image/java.png" type="image/x-icon">
+    <title>Lista Doble Circular</title>
+    <link rel="stylesheet" href="./style/arbol.css"> <!-- Enlace al archivo CSS -->
+</head>
+
+<body>
+    <!-- Encabezado con los botones de navegación -->
+    <header>
+        <h1 class="title-1">Lista Doble Circular</h1>
+        <nav class="container-nav">
+            <a class="link-home" href="./index.html">Inicio</a> <!-- Botón de inicio -->
+            <a class="link-nav" href="./pila-cola.html">Pila-Cola</a>
+            <a class="link-nav" href="./Llista-doble-circular.html">Lista</a>
+            <a class="link-nav" href="./arbol.html">Árbol</a>
+            <a class="link-nav" href="./codigo.html">codigo</a>
+        </nav>
+    </header>
+
+    <!-- Contenido principal de la página -->
+    <main>
+        <!-- Sección de Lista Simple -->
+        <section class="lista-simple">
+            <h2>Lista Simple</h2>
+            <p>Una lista simple (o lista enlazada simple) es una estructura de datos que consiste en una secuencia de nodos, donde cada nodo contiene un dato y una referencia (o enlace) al siguiente nodo en la secuencia. Esta estructura permite una inserción y eliminación de elementos eficientes.</p>
+            <h3>Características de la Lista Simple</h3>
+            <ul>
+                <li><strong>Cada nodo tiene un valor (dato) y una referencia al siguiente nodo.</strong></li>
+                <li><strong>Solo se puede acceder a los elementos de forma secuencial, comenzando desde la cabeza de la lista.</strong></li>
+                <li><strong>Los nodos se asignan dinámicamente, lo que permite ajustar el tamaño de la lista en tiempo de ejecución.</strong></li>
+                <li><strong>Operaciones: Añadir al inicio, añadir al final, eliminar un nodo, buscar un elemento.</strong></li>
+            </ul>
+        </section>
+
+        <!-- Sección de Lista Doble -->
+        <section class="lista-doble">
+            <h2>Lista Doble</h2>
+            <p>Una lista doble (o lista doblemente enlazada) es una estructura de datos en la que cada nodo contiene un valor, una referencia al siguiente nodo y una referencia al nodo anterior, permitiendo una navegación bidireccional.</p>
+            <h3>Características de la Lista Doble</h3>
+            <ul>
+                <li><strong>Cada nodo tiene un valor, una referencia al nodo siguiente y una referencia al nodo anterior.</strong></li>
+                <li><strong>Navegación Bidireccional: Se puede recorrer la lista tanto hacia adelante como hacia atrás.</strong></li>
+                <li><strong>Mayor Memoria: Requiere más memoria que una lista simple debido a las referencias adicionales.</strong></li>
+                <li><strong>Operaciones: Añadir al inicio, añadir al final, eliminar un nodo, buscar un elemento, recorrer hacia atrás.</strong></li>
+            </ul>
+        </section>
+
+        <!-- Sección de Lista Circular -->
+        <section class="lista-circular">
+            <h2>Lista Circular</h2>
+            <p>Una lista circular es una variante de la lista enlazada en la que el último nodo de la lista apunta de nuevo al primer nodo, formando un círculo.</p>
+            <h3>Características de la Lista Circular</h3>
+            <ul>
+                <li><strong>Cada nodo tiene un valor y una referencia al siguiente nodo.</strong></li>
+                <li><strong>Ciclo Infinito: El último nodo apunta al primer nodo, permitiendo recorrer la lista de manera circular.</strong></li>
+                <li><strong>Sin Nodo Nulo: No existe un nodo nulo en la lista circular a menos que se represente de forma explícita.</strong></li>
+                <li><strong>Operaciones: Añadir al inicio, añadir al final, eliminar un nodo, buscar un elemento, recorrer de forma circular.</strong></li>
+            </ul>
+        </section>
+    </main>
+
+</body>
+
+</html>
+
+

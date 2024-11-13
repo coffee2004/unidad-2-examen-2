@@ -1,0 +1,175 @@
+/* Reset global de márgenes y relleno */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo del cuerpo de la página */
+body {
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 98, 121, 1) 67%, rgba(0, 212, 255, 1) 100%);
+    color: rgb(247, 241, 241);
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+/* Estilo para el header */
+header {
+    height: 12rem;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 98, 121, 1) 67%, rgba(0, 212, 255, 1) 100%);
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+    z-index: 1000;
+}
+
+/* Título dentro del header */
+.title-1 {
+    margin: 0;
+    font-size: 2rem;
+    color: #fff;
+    font-weight: bold;
+    position: absolute;
+    left: 1rem;
+}
+
+/* Contenedor de la barra de navegación */
+.container-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+/* Enlace de navegación */
+.link-nav, .link-home {
+    background-color: #fffcfc;
+    padding: 0.75rem;
+    width: 10rem;
+    height: 3rem;
+    margin: 0.75rem 1rem;
+    border: 3px solid #03f3f3;
+    border-radius: 1rem;
+    text-align: center;
+    display: grid;
+    place-content: center;
+    text-decoration: none;
+    color: rgb(2, 1, 1);
+    font-weight: 500;
+    transition: background-color 0.3s, transform 0.3s;
+    cursor: pointer;
+}
+
+/* Efecto hover para los enlaces de navegación */
+.link-nav:hover, .link-home:hover {
+    background-color: #03f3f3;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+/* Estilo para las imágenes */
+.imagen-contenedor {
+    position: relative;
+    display: flex; /* Cambié el display a flex */
+    align-items: center;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+}
+
+.imagen-ejemplo {
+    max-width: 50%; /* Las imágenes ahora ocupan el 50% del ancho */
+    margin-right: 20px; /* Espaciado a la derecha de la imagen */
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, filter 0.3s;
+}
+
+/* Efecto de desenfoque en la imagen cuando se pasa el ratón */
+.imagen-ejemplo:hover {
+    transform: scale(1.05); /* Aumenta ligeramente la imagen */
+    filter: blur(5px); /* Desenfoque de la imagen */
+}
+
+/* Estilo para la información */
+.informacion {
+    position: relative;
+    top: 0;
+    right: 0;
+    width: 40%; /* La información ocupará el 40% del ancho */
+    background-color: #fff;
+    color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transition: right 0.3s, opacity 0.3s, visibility 0.3s;
+    z-index: 1;
+}
+
+/* Mostrar la información al pasar el ratón sobre la imagen */
+.imagen-contenedor:hover .informacion {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Asegurarnos de que el contenido principal no quede tapado por el header */
+main {
+    margin-top: 14rem; /* Aseguramos que el contenido esté debajo del header con suficiente espacio */
+    padding: 1rem;
+}
+
+/* Estilo responsive para dispositivos pequeños */
+@media (max-width: 768px) {
+    header {
+        height: auto;
+        flex-direction: column;
+        padding: 1rem;
+        align-items: flex-start;
+    }
+
+    .container-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .link-nav, .link-home {
+        width: auto;
+        height: auto;
+        margin: 0.5rem 0;
+    }
+
+    .imagen-contenedor {
+        flex-direction: column; /* Hacer que las imágenes y la información se apilen en dispositivos pequeños */
+        align-items: center;
+    }
+
+    .imagen-ejemplo {
+        max-width: 95%; /* Las imágenes se reducen al 95% del ancho en dispositivos pequeños */
+    }
+
+    .informacion {
+        width: 90%; /* La caja de información ocupa el 90% del ancho en pantallas pequeñas */
+    }
+
+    main {
+        margin-top: 12rem;
+    }
+}
+
+/* Estilo para el pie de página */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #333;
+    text-align: center;
+    padding: 1rem 0;
+    color: #fff;
+}
